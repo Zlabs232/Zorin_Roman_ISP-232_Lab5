@@ -132,6 +132,13 @@
             PrintPerson(name: "Алексей", age: 32);
             PrintPerson(name: "Dunkan", age: 1234);
 
+            Random random = new Random();
+            int numb = random.Next(0, 100);
+            Console.WriteLine($"Случайное число: {numb}");
+            double randomDouble = random.NextDouble();
+            Console.WriteLine($"Случайное число: {randomDouble}");
+
+
         }
     }
 }
