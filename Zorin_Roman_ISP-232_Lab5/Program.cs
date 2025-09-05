@@ -238,6 +238,13 @@
             }
             AddNumbers(5, 8);
 
+            //Task 4
+            bool isEven(int n)
+            {
+                return n % 2 == 0 ? true : false;
+            }
+            isEven(4);
+
 
         }
     }
