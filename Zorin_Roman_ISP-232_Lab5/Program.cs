@@ -259,7 +259,14 @@
             int[] m = { 1, 2, 3, 4, 5, 6, 7 };
             findMax(m);
 
+            //Task 6
+            double ConvertCelsiusToFahrenheit(double celsius)
+            {
+                return celsius * 9 / 5 + 32;
+            }
 
+            double celsius = 25;
+            double fahrenheit = ConvertCelsiusToFahrenheit(celsius);
         }
     }
 }
