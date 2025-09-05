@@ -245,6 +245,20 @@
             }
             isEven(4);
 
+            //Task 5
+            int findMax(int[] m)
+            {
+                int max = 0;
+                for(int i = 0; i < m.Length; i++)
+                {
+                    if(m[i] > max)
+                        max = m[i];
+                }
+                return max;
+            }
+            int[] m = { 1, 2, 3, 4, 5, 6, 7 };
+            findMax(m);
+
 
         }
     }
