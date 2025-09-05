@@ -193,6 +193,28 @@
             int[] numbers1 = [1, 2, 3];
             int[] numbers2 = [3, 4, 5, 6, 7];
             Compare(numbers1, numbers2);
+
+            int Sum4(int[] numbers)
+            {
+                int limit = 0;
+                int result = 0;
+                foreach (int number in numbers)
+                {
+                    if (IsPassed(number)) result += number;
+                }
+                return result;
+
+                bool IsPassed(int number)
+                {
+                    return number > limit;
+                }
+            }
+
+            int[] numbers5 = [-3, -2, -1, 0, 1, 2, 3];
+            int[] numbers6 = [3, -4, 5, -6, 7];
+
+            Console.WriteLine(Sum4(numbers5));
+            Console.WriteLine(Sum4(numbers6));
         }
     }
 }
