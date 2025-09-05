@@ -383,7 +383,22 @@
                     Console.WriteLine("Неверный выбор операции!");
             }
 
+            //Task 12
+            bool isPrime(int n)
+            {
+                if (n < 2) return false;
+                for(int i = 2; i < Math.Sqrt(n); i++)
+                    if(n % i == 0) return false;
+                return true;
+            }
 
+            void PrintPrimesUpTo(int n)
+            {
+                for(int i = 2; i <= n; i++)
+                    if (isPrime(i)) Console.WriteLine(i + " ");
+            }
+
+            PrintPrimesUpTo(13);
     }
         static double GetNumber()
         {
