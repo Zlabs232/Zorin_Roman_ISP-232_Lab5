@@ -72,6 +72,11 @@
             Person(age: 30, name: "Иван");
             Person(vuz: "МГУ", age: 20, name: "Дмитрий");
 
+            string getMessage()
+            {
+                return "Hello";
+            }
+            Console.WriteLine(getMessage());
 
         }
     }
