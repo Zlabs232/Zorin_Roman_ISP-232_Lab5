@@ -288,7 +288,19 @@
             int vowelCount = CountVowels(text);
             Console.WriteLine($"Кол-во гласных: {vowelCount}");
 
+            //Task 8
+            string GeneratePassword(int length)
+            {
+                string chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+                Random random = new Random();
+                char[] password = new char[length];
 
+                for(int i = 0; i < length; i++) 
+                    password[i] = chars[random.Next(chars.Length)];
+
+                return new string(password);
+            }
+            Console.WriteLine($"Пароль: {GeneratePassword(20)}");
         }
     }
 }
