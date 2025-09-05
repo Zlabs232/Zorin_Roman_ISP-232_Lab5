@@ -312,7 +312,7 @@
                 }
                 return true;
             }
-            Console.WriteLine(IsPalindrome("шалаш"));
+            Console.WriteLine(IsPalindrome("hello"));
 
             //Task 10
             int[] ReverseArray(int[] array)
@@ -326,9 +326,96 @@
             int[] numbers = { 1, 2, 3, 4, 5 };
             int[] reversed = ReverseArray(numbers);
 
-            
+            //Task 11
+            while (true)
+            {
+                Console.Clear();
+                Console.WriteLine("=== КАЛЬКУЛЯТОР ===");
+                Console.WriteLine("1. Сложение");
+                Console.WriteLine("2. Вычитание");
+                Console.WriteLine("3. Умножение");
+                Console.WriteLine("4. Деление");
+                Console.WriteLine("5. Выход");
+                Console.WriteLine("====================");
+                Console.Write("Выберите операцию (1-5): ");
+
+                string choice = Console.ReadLine();
+                if(choice == "5")
+                {
+                    Console.WriteLine("До свидания!");
+                    break;
+                }
+                if (choice == "1" || choice == "2" || choice == "3" || choice == "4")
+                {
+                    Console.Write("Введите первое число: ");
+                    double num1 = GetNumber();
+
+                    Console.Write("Введите второе число: ");
+                    double num2 = GetNumber();
+
+                    double result = 0;
+                    bool validOperation = true;
+
+                    if (choice == "1")
+                        result = Add(num1, num2);
+                    else if (choice == "2")
+                        result = Subtract(num1, num2);
+                    else if (choice == "3")
+                        result = Multiply(num1, num2);
+                    else if (choice == "4")
+                    {
+                        if (num2 == 0)
+                        {
+                            Console.WriteLine("Ошибка: деление на ноль!");
+                            validOperation = false;
+                        }
+                        else
+                            result = Divide(num1, num2);
+                    }
+
+                    if (validOperation)
+                        Console.WriteLine($"Результат: {result}");
+
+                    Console.WriteLine("Нажмите любую клавишу для продолжения...");
+                    Console.ReadKey();
+                }
+                else
+                    Console.WriteLine("Неверный выбор операции!");
+            }
 
 
+    }
+        static double GetNumber()
+        {
+            while (true)
+            {
+                string input = Console.ReadLine();
+                double number = 0;
+
+                for (int i = 0; i < input.Length; i++)
+                    number = number * 10 + (input[i] - '0');
+                return number;
+            }
+        }
+
+        static double Add(double a, double b)
+        {
+            return a + b;
+        }
+
+        static double Subtract(double a, double b)
+        {
+            return a - b;
+        }
+
+        static double Multiply(double a, double b)
+        {
+            return a * b;
+        }
+
+        static double Divide(double a, double b)
+        {
+            return a / b;
         }
     }
 }
