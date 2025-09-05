@@ -223,6 +223,15 @@
              3. Метод вызовет ошибку компиляции
              4. void PrintNumber(int number)
              5. PrintMessage("Hello, World!"), но в ответах указан вариант где фраза пишется в '' кавычках, так что если выбирать из того, что есть, то всё неправильно*/
+
+            //Task 2
+            void GreetUser(string name)
+            {
+                Console.WriteLine($"Привет, {name}! Добро пожаловать в программу");
+            }
+            GreetUser("Роман");
+
+
         }
     }
 }
