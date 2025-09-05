@@ -138,7 +138,19 @@
             double randomDouble = random.NextDouble();
             Console.WriteLine($"Случайное число: {randomDouble}");
 
-
+            void ShowWelcomeMessage() => Console.WriteLine("Добро пожаловать в консольный прогноз погоды!");
+            void ShowGoodbyeMessage() => Console.WriteLine("Спасибо за использование нашего прогноза! Хорошего дня!");
+            
+            string getWeather()
+            {
+                string[] weathers = { "Солнечно", "Облачно", "Дождь", "Снег", "Гроза"};
+                Random random = new Random();
+                int index = random.Next(weathers.Length);
+                return weathers[index];
+            }
+            ShowWelcomeMessage();
+            Console.WriteLine($"Погода на сегодня: {getWeather()}");
+            ShowGoodbyeMessage();
         }
     }
 }
