@@ -231,6 +231,13 @@
             }
             GreetUser("Роман");
 
+            //Task 3
+            int AddNumbers(int a, int b)
+            {
+                return a + b;
+            }
+            AddNumbers(5, 8);
+
 
         }
     }
