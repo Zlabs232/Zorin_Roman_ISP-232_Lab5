@@ -170,14 +170,8 @@
 
             void Compare(int[] numbers1, int[] numbers2)
             {
-                int numbers1Sum = 0;
-                int numbers2Sum = 0;
-
-                foreach (int number in numbers1)
-                    numbers1Sum += number;
-
-                foreach (int number in numbers2)
-                    numbers2Sum += number;
+                int numbers1Sum = Sum(numbers1);
+                int numbers2Sum = Sum(numbers2);
 
                 if (numbers1Sum > numbers2Sum)
                     Console.WriteLine("сумма чисел из массива numbers1 больше");
@@ -185,6 +179,15 @@
                     Console.WriteLine("сумма чисел из массива numbers2 больше");
                 else
                     Console.WriteLine("суммы чисел обоих массивов равны");
+
+                int Sum(int[] numbers)
+                {
+                    int res = 0;
+                    foreach (int i in numbers)
+                        res += i;
+                    return res;
+
+                }
             }
 
             int[] numbers1 = [1, 2, 3];
