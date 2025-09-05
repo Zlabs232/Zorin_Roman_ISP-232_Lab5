@@ -55,6 +55,12 @@
             Console.Write("Введите переменную y: ");
             int y = Convert.ToInt32(Console.ReadLine());
             Sum(x, y);
+
+            void printPerson(string nameP, int age)
+            {
+                Console.WriteLine($"Имя: {nameP}, возраст: {age}");
+            }
+            printPerson("Роман", 18);
         }
     }
 }
