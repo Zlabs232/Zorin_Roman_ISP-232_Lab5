@@ -267,6 +267,28 @@
 
             double celsius = 25;
             double fahrenheit = ConvertCelsiusToFahrenheit(celsius);
+
+            //Task 7
+            int CountVowels(string text)
+            {
+                int count = 0;
+                string vowels = "aeiouAEIOU";
+
+                foreach (char c in text)
+                {
+                    if (vowels.Contains(c))
+                    {
+                        count++;
+                    }
+                }
+
+                return count;
+            }
+            string text = "Hello World!";
+            int vowelCount = CountVowels(text);
+            Console.WriteLine($"Кол-во гласных: {vowelCount}");
+
+
         }
     }
 }
