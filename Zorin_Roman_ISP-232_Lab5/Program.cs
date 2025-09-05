@@ -41,6 +41,20 @@
             Console.Write("Введите своё имя: ");
             string? name2 = Console.ReadLine();
             print(message:$"Твоё имя: {name2}");
+
+            void Sum(int x, int y)
+            {
+                int result = x + y;
+                Console.WriteLine($"{x} + {y} = {result}");
+            }
+
+            Sum(10, 20);
+
+            Console.Write("Введите переменную x: ");
+            int x = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите переменную y: ");
+            int y = Convert.ToInt32(Console.ReadLine());
+            Sum(x, y);
         }
     }
 }
