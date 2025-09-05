@@ -78,6 +78,26 @@
             }
             Console.WriteLine(getMessage());
 
+            int Sum2(int a, int b)
+            {
+                return a + b;
+            }
+
+            Sum2(10, 20);
+
+            int number = Convert.ToInt32(Console.ReadLine());
+
+            void CheckValue(int number)
+            {
+                if (number < 0)
+                {
+                    Console.WriteLine("Отрицательное число");
+                    return;
+                }
+                Console.WriteLine("Положительное число");
+            }
+
+            CheckValue(number);
         }
     }
 }
