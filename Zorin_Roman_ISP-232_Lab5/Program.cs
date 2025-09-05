@@ -98,6 +98,18 @@
             }
 
             CheckValue(number);
+
+            string mes = getMessage();
+            Console.WriteLine(mes);
+
+            void PrintMessage(string message)
+            {
+                Console.WriteLine(message);
+            }
+
+            PrintMessage(getMessage());
+
+
         }
     }
 }
