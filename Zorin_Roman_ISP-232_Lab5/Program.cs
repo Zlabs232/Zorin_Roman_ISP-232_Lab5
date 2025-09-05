@@ -61,6 +61,18 @@
                 Console.WriteLine($"Имя: {nameP}, возраст: {age}");
             }
             printPerson("Роман", 18);
+
+            void Person(string name, int age = 18, string vuz = "BФ BолГУ") =>
+                Console.WriteLine($"Имя: {name} \nВозраст: {age} \nВуз: {vuz}");
+
+            Person(name: "Александр");
+            Person(name: "Иван", age: 30);
+            Person(name: "Дмитрий", age: 20, vuz: "МГУ");
+
+            Person(age: 30, name: "Иван");
+            Person(vuz: "МГУ", age: 20, name: "Дмитрий");
+
+
         }
     }
 }
