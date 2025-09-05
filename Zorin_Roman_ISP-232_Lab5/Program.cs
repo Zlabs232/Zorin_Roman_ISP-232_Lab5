@@ -32,7 +32,15 @@
                 case "немецкий": SayHelloDe(); break;
                 default: Console.WriteLine("Язык не найден!"); break;
             }
+            void print(string message)
+            {
+                Console.WriteLine(message);
+            }
 
+            Console.WriteLine("Как тебя зовут?");
+            Console.Write("Введите своё имя: ");
+            string? name2 = Console.ReadLine();
+            print(message:$"Твоё имя: {name2}");
         }
     }
 }
