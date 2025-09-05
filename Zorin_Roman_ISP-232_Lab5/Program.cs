@@ -40,7 +40,7 @@
             Console.WriteLine("Как тебя зовут?");
             Console.Write("Введите своё имя: ");
             string? name2 = Console.ReadLine();
-            print(message:$"Твоё имя: {name2}");
+            print(message: $"Твоё имя: {name2}");
 
             void Sum(int x, int y)
             {
@@ -140,10 +140,10 @@
 
             void ShowWelcomeMessage() => Console.WriteLine("Добро пожаловать в консольный прогноз погоды!");
             void ShowGoodbyeMessage() => Console.WriteLine("Спасибо за использование нашего прогноза! Хорошего дня!");
-            
+
             string getWeather()
             {
-                string[] weathers = { "Солнечно", "Облачно", "Дождь", "Снег", "Гроза"};
+                string[] weathers = { "Солнечно", "Облачно", "Дождь", "Снег", "Гроза" };
                 Random random = new Random();
                 int index = random.Next(weathers.Length);
                 return weathers[index];
@@ -160,7 +160,7 @@
                 return n * Factorial(n - 1);
             }
 
-            int factorial = Factorial(n:4);
+            int factorial = Factorial(n: 4);
             int factorial2 = Factorial(n: 5);
             int factorial3 = Factorial(n: 6);
 
@@ -249,9 +249,9 @@
             int findMax(int[] m)
             {
                 int max = 0;
-                for(int i = 0; i < m.Length; i++)
+                for (int i = 0; i < m.Length; i++)
                 {
-                    if(m[i] > max)
+                    if (m[i] > max)
                         max = m[i];
                 }
                 return max;
@@ -295,12 +295,24 @@
                 Random random = new Random();
                 char[] password = new char[length];
 
-                for(int i = 0; i < length; i++) 
+                for (int i = 0; i < length; i++)
                     password[i] = chars[random.Next(chars.Length)];
 
                 return new string(password);
             }
             Console.WriteLine($"Пароль: {GeneratePassword(20)}");
+
+            //Task 9 
+            bool IsPalindrome(string word)
+            {
+                for (int i = 0; i < word.Length; i++)
+                {
+                    if (word[i] != word[i - 1 - i])
+                        return false;
+                }
+                return true;
+            }
+            Console.WriteLine(IsPalindrome("шалаш"));
         }
     }
 }
