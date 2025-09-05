@@ -313,6 +313,22 @@
                 return true;
             }
             Console.WriteLine(IsPalindrome("шалаш"));
+
+            //Task 10
+            int[] ReverseArray(int[] array)
+            {
+                int[] reversed = new int[array.Length];
+
+                for (int i = 0; i < array.Length; i++)
+                    reversed[i] = array[array.Length - 1 - i];
+                return reversed;
+            }
+            int[] numbers = { 1, 2, 3, 4, 5 };
+            int[] reversed = ReverseArray(numbers);
+
+            
+
+
         }
     }
 }
