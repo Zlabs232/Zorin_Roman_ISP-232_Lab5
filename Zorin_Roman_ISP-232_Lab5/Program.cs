@@ -167,6 +167,29 @@
             Console.WriteLine($"Факториал числа 4 = {factorial}");
             Console.WriteLine($"Факториал числа 5 = {factorial2}");
             Console.WriteLine($"Факториал числа 6 = {factorial3}");
+
+            void Compare(int[] numbers1, int[] numbers2)
+            {
+                int numbers1Sum = 0;
+                int numbers2Sum = 0;
+
+                foreach (int number in numbers1)
+                    numbers1Sum += number;
+
+                foreach (int number in numbers2)
+                    numbers2Sum += number;
+
+                if (numbers1Sum > numbers2Sum)
+                    Console.WriteLine("сумма чисел из массива numbers1 больше");
+                else if (numbers1Sum < numbers2Sum)
+                    Console.WriteLine("сумма чисел из массива numbers2 больше");
+                else
+                    Console.WriteLine("суммы чисел обоих массивов равны");
+            }
+
+            int[] numbers1 = [1, 2, 3];
+            int[] numbers2 = [3, 4, 5, 6, 7];
+            Compare(numbers1, numbers2);
         }
     }
 }
