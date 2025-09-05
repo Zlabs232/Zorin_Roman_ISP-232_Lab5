@@ -2,13 +2,18 @@
 {
     class Lab4
     {
-        void SayHello()
+        static void SayHello()
         {
             Console.WriteLine("Hello"); //void SayHello() => Console.WriteLine("Hello");
         }
+        static void Game()
+        {
+            string myGame = "ARK: Survival Evolved";
+            Console.WriteLine(myGame);
+        }
         static void Main()
         {
-
+            Game();
         }
     }
 }
