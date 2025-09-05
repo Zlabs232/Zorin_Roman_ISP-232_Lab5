@@ -215,6 +215,14 @@
 
             Console.WriteLine(Sum4(numbers5));
             Console.WriteLine(Sum4(numbers6));
+
+            //Task 1
+            /*
+             1. Ничего
+             2. void ShowWelcomeMassege
+             3. Метод вызовет ошибку компиляции
+             4. void PrintNumber(int number)
+             5. PrintMessage("Hello, World!"), но в ответах указан вариант где фраза пишется в '' кавычках, так что если выбирать из того, что есть, то всё неправильно*/
         }
     }
 }
