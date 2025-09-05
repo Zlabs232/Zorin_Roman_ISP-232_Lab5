@@ -119,6 +119,18 @@
             //    return x + y;
             //}
 
+            void PrintPerson(string name, int age)
+            {
+                if (age > 120 || age < 1)
+                {
+                    Console.WriteLine("Недопустимый возраст");
+                    return;
+                }
+                Console.WriteLine($"Имя: {name} Возраст: {age}");
+            }
+
+            PrintPerson(name: "Алексей", age: 32);
+            PrintPerson(name: "Dunkan", age: 1234);
 
         }
     }
