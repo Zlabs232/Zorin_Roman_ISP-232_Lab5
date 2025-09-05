@@ -200,13 +200,13 @@
                 int result = 0;
                 foreach (int number in numbers)
                 {
-                    if (IsPassed(number)) result += number;
+                    if (IsPassed(number, limit)) result += number;
                 }
                 return result;
 
-                bool IsPassed(int number)
+                static bool IsPassed(int number, int lim)
                 {
-                    return number > limit;
+                    return number > lim;
                 }
             }
 
