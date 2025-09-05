@@ -109,6 +109,16 @@
 
             PrintMessage(getMessage());
 
+            //string GetMessage()
+            //{                         string GetMessage() => "hello";
+            //    return "hello";
+            //}
+
+            //int Sum3(int x, int y)
+            //{                         int Sum3(int x, int y) => x + y;
+            //    return x + y;
+            //}
+
 
         }
     }
