@@ -151,6 +151,22 @@
             ShowWelcomeMessage();
             Console.WriteLine($"Погода на сегодня: {getWeather()}");
             ShowGoodbyeMessage();
+
+            Console.WriteLine();
+
+            int Factorial(int n)
+            {
+                if (n == 1) return 1;
+                return n * Factorial(n - 1);
+            }
+
+            int factorial = Factorial(n:4);
+            int factorial2 = Factorial(n: 5);
+            int factorial3 = Factorial(n: 6);
+
+            Console.WriteLine($"Факториал числа 4 = {factorial}");
+            Console.WriteLine($"Факториал числа 5 = {factorial2}");
+            Console.WriteLine($"Факториал числа 6 = {factorial3}");
         }
     }
 }
